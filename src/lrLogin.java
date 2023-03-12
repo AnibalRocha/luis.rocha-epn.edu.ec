@@ -14,7 +14,7 @@ public class lrLogin extends JFrame {
         super("Formulario de ingreso");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(6, 5, 12, 10));
-
+        
         labelUsuario = new JLabel("Usuario:");
         campoUsuario = new JTextField();
         labelContraseña = new JLabel("Contraseña:");
@@ -37,14 +37,19 @@ public class lrLogin extends JFrame {
                 String lrContraseña = campoContraseña.getText();
                 // usuario 1
                 if (lrUsuario.equals("luis.rocha@epn.edu.ec") && lrContraseña.equals("1756308316")) {
-                    lrFormularioCoordenada();
+                    JOptionPane.showMessageDialog(null, "Exitoso ingreso.");
+                        System.exit(0);
+                    //lrFormularioCoordenada();
                 // usuario 2
                 } else if (lrUsuario.equals("alumno2") && lrContraseña.equals("1756308316")) {
-                    lrFormularioCoordenada();
+                    JOptionPane.showMessageDialog(null, "Exitoso ingreso.");
+                        System.exit(0);
+                    //lrFormularioCoordenada();
                 //profesor
                 } else if (lrUsuario.equals("profe") && lrContraseña.equals("1234")) {
                     lrFormularioCoordenada();
-                    
+                    JOptionPane.showMessageDialog(null, "Exitoso ingreso.");
+                        System.exit(0);
                 } else {
                     intentosRestantes--;
                     labelIntentos.setText("Intentos restantes: " + intentosRestantes);
@@ -64,11 +69,12 @@ public class lrLogin extends JFrame {
     }
 
     private void lrFormularioCoordenada(){
+      //  JOptionPane.showMessageDialog(this, "incio exitoso", getTitle(), ABORT);
         System.out.println("probando");
     }
     
     /**
-     * @param args
+     * Inicio del examen
      */
     public static void main(String[] args) {
         new lrLogin();
