@@ -1,3 +1,8 @@
+/*
+ * Examen 2 programación
+ * @luis.rocha@epn.edu.ec
+ * 12/03/2023
+ */
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -11,10 +16,12 @@ public class lrLogin extends JFrame {
     private int intentosRestantes = 3;
 
     public lrLogin() {
+        
+        //tamaño de la ventana por presentar
         super("Formulario de ingreso");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(6, 5, 12, 10));
-        
+
         labelUsuario = new JLabel("Usuario:");
         campoUsuario = new JTextField();
         labelContraseña = new JLabel("Contraseña:");
